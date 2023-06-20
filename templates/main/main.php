@@ -7,8 +7,8 @@
                 <?php foreach ($articles as $article) : ?>
                     <div class="card text-bg-secondary mb-3">
                         <div class="card-body">
-                            <h5 class="card-title"><a class="link-warning" href="/articles/<?= $article['id'] ?>"><?= $article['title'] ?> </a></h5>
-                            <p class="card-text"><?= mb_substr($article['text'], 0, 300) ?>...</p>
+                            <h5 class="card-title"><a class="link-warning" href="/articles/<?= $article->getId() ?>"><?= $article->getTitle() ?> </a></h5>
+                            <p class="card-text"><?= mb_substr($article->getText(), 0, 300) ?>...</p>
                         </div>
                     </div>
                 <?php endforeach; ?>
